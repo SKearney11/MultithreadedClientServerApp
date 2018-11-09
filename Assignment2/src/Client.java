@@ -49,9 +49,6 @@ public class Client extends JFrame implements ActionListener{
     try {
       // Create a socket to connect to the server
       Socket socket = new Socket("localhost", 8000);
-      // Socket socket = new Socket("130.254.204.36", 8000);
-      // Socket socket = new Socket("drake.Armstrong.edu", 8000);
-
       // Create an input stream to receive data from the server
       fromServer = new DataInputStream(socket.getInputStream());
 
@@ -68,13 +65,11 @@ public class Client extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {		
 		if (e.getSource() == btnSend) {
 			try {
-		        // Get the radius from the text field
+		        // Get the message from the text field
 		        String message = jtf.getText().trim();
-		
 		        // Send the message to the server
 		        toServer.writeUTF(message);
 		        toServer.flush();
-		
 		        // Display to the text area
 		        jta.append("Message: " + message + "\n");
 		      }
