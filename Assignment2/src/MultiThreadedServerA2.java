@@ -8,7 +8,7 @@ import java.util.*;
 import java.awt.*;
 import javax.swing.*;
 
-public class Server extends JFrame {
+public class MultiThreadedServerA2 extends JFrame {
 	
 	//for connecting to SQL Server
 		private final String userName = "root";
@@ -22,10 +22,10 @@ public class Server extends JFrame {
 	  private JTextArea jta = new JTextArea();
 
 	  public static void main(String[] args) {
-	    new Server();
+	    new MultiThreadedServerA2();
 	  }
 
-	  public Server() {
+	  public MultiThreadedServerA2() {
 	    // Place text area on the frame
 	    setLayout(new BorderLayout());
 	    add(new JScrollPane(jta), BorderLayout.CENTER);

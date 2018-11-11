@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Client extends JFrame implements ActionListener{
+public class ClientA2 extends JFrame implements ActionListener{
 	
 	//make buttons
 	private JButton btnSend, btnExit;
@@ -21,10 +21,10 @@ public class Client extends JFrame implements ActionListener{
 	private DataInputStream fromServer;
 
 	public static void main(String[] args) throws SQLException {
-		new Client();
+		new ClientA2();
 	}
 	
-	public Client() throws SQLException {
+	public ClientA2() throws SQLException {
 		setLayout(new CardLayout());
 		jtf = new JTextField("Message");
 		add(makeGuiLogin());
